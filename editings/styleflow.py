@@ -13,7 +13,7 @@ def edit_attribute(w_latents, attributes, lighting, session, model, w_avg, flow_
     att_min = {'Gender': -5, 'Glasses': -5, 'Yaw': -100, 'Pitch': -100, 'Baldness': -5, 'Beard': -5.0, 'Age': 0,
                'Expression': -5}
     att_max = {'Gender': 5, 'Glasses': 5, 'Yaw': 100, 'Pitch': 100, 'Baldness': 5, 'Beard': 5, 'Age': 65, 'Expression': 5}
-    z_latents = flow_w_to_z(flow_model, w_latents, attributes, lighting)
+    z_latents = flow_w_to_z(flow_model, w_latents, attributes.ravel(), lighting)
     new_w_latents = w_latents
 
     att_new = list(attributes.values())
