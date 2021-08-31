@@ -35,7 +35,7 @@ def edit_attribute(w_latents, attributes, lighting, session, model, w_avg, flow_
     if attr_idx == -1:
         return w_latents
 
-    return preserve_w_id(new_w_latents, w_latents, attr_idx).cuda()
+    return torch.Tensor(preserve_w_id(new_w_latents, w_latents, attr_idx)).cuda()
 
     
 
