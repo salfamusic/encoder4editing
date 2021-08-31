@@ -1,6 +1,7 @@
 from module.flow import cnf
 import torch
 import tensorflow as tf
+import numpy as np
 
 
 def edit_attribute(w_latents, attributes, lighting, session, model, w_avg, flow_model, direction, strength):
