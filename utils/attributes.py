@@ -10,6 +10,8 @@ from urllib.parse import urlparse
 from io import BytesIO
 import numpy as np
 from PIL import Image, ImageDraw
+sys.path.append(".")
+sys.path.append("..")
 
 from azure.cognitiveservices.vision.face import FaceClient
 from msrest.authentication import CognitiveServicesCredentials
