@@ -12,6 +12,7 @@ from torchvision.utils import make_grid
 import torch
 import time
 import cv2
+from utils.shading import *
 
 def predict_lighting(filepath, lighting_network):
     img = cv2.imread(filepath)
