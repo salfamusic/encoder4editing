@@ -16,6 +16,9 @@ import os
 import re
 import sys
 
+sys.path.append(".")
+sys.path.append("..")
+
 import pretrained_networks
 
 def Align_face_image(src_file, output_size=1024, transform_size=4096,
