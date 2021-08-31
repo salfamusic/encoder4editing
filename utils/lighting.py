@@ -27,7 +27,7 @@ def predict_lighting(filepath, lighting_network):
 
     lightFolder = 'data/example_light/'
 
-    sh = np.loadtxt(os.path.join(lightFolder, 'rotate_light_0.txt'))
+    sh = np.loadtxt(os.path.join(lightFolder, 'rotate_light_00.txt'))
     sh = sh[0:9]
     sh = sh * 0.7
 
