@@ -10,7 +10,7 @@ from torchvision.utils import make_grid
 import torch
 import time
 import cv2
-from models.drp.defineHourglass_1024_gray_skip_matchFeature import *
+from models.dpr.defineHourglass_1024_gray_skip_matchFeature import *
 
 def get_dpr_network():
     modelFolder = 'trained_model/'
