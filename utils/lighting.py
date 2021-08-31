@@ -50,7 +50,7 @@ def predict_lighting(filepath, lighting_network):
     #----------------------------------------------
     sh = np.reshape(sh, (1,9,1,1)).astype(np.float32)
     sh = Variable(torch.from_numpy(sh).cuda())
-    outputImg, _, outputSH, _  = self.my_network(inputL, sh, 0)
+    outputImg, _, outputSH, _  = lighting_network(inputL, sh, 0)
     return outputSH.detach().cpu().numpy()
 
 def create_normal():
