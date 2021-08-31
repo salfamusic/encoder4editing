@@ -78,6 +78,7 @@ class TrainOptions:
                                  help='Path to training checkpoint, works when --save_training_data was set to True')
         self.parser.add_argument('--update_param_list', nargs='+', type=str, default=None,
                                  help="Name of training parameters to update the loaded training checkpoint")
+        self.parser.add_argument('--network_pkl', type=str, default='gdrive:networks/stylegan2-ffhq-config-f.pkl')
 
     def parse(self):
         opts = self.parser.parse_args()
