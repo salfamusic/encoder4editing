@@ -29,7 +29,7 @@ def edit_attribute(w_latents, attributes, lighting, session, model, w_avg, flow_
 
         attr_final = attr_degree_list[i] * attr_change + attributes[i]
         att_new[i] = attr_final
-        new_w_latents = flow_z_to_w(flow_model, z_latents, att_new, lighting)
+        new_w_latents = flow_z_to_w(flow_model, z_latents, att_new, lighting.ravel())
         break
 
     if attr_idx == -1:
