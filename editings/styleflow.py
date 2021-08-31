@@ -75,7 +75,7 @@ def preserve_w_id(w_new, w_orig, attr_index):
     return w_new
 
 def flow_w_to_z(flow_model, w, attributes, lighting):
-    w_cuda = torch.Tensor(w)
+    w_cuda = torch.Tensor(w.cpu().data.numpy())
     att_cuda = torch.from_numpy(np.asarray(attributes)).float().unsqueeze(0).unsqueeze(-1).unsqueeze(-1)
     light_cuda = torch.Tensor(lighting)
 
@@ -93,4 +93,4 @@ def flow_z_to_w(flow_model, z, attributes, lighting):
     zero_padding = torch.zeros(1, 18, 1)
     w = flow_model(z, features, zero_padding, True)[0].clone().detach().numpy()
 
-    return w
+    return w.cuda()

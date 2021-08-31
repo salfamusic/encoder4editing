@@ -16,4 +16,4 @@ def get_styleflow_model():
     prior.load_state_dict(torch.load('flow_weight/modellarge10k.pt'))
     prior.eval()
 
-    return session, model, w_avg, prior.cuda()
+    return session, model, w_avg, prior.cpu()
