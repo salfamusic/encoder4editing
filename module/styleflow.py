@@ -1,6 +1,7 @@
 from utils.sf_utils import Build_model
 from module.flow import cnf
 import tensorflow as tf
+import torch
 
 def get_styleflow_model():
     # Open a new TensorFlow session.

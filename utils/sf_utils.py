@@ -194,6 +194,7 @@ class Build_model:
     def __init__(self, network_pkl):
         print('Loading networks from "%s"...' % network_pkl)
         _G, _D, Gs = pretrained_networks.load_networks(network_pkl)
+        print('loaded')
         self.Gs = Gs
         self.Gs_syn_kwargs = dnnlib.EasyDict()
         self.Gs_syn_kwargs.output_transform = dict(func=tflib.convert_images_to_uint8, nchw_to_nhwc=True)
