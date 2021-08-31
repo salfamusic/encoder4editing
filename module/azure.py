@@ -7,5 +7,5 @@ from azure.cognitiveservices.vision.computervision.models import OperationStatus
 from azure.cognitiveservices.vision.computervision.models import VisualFeatureTypes
 from msrest.authentication import CognitiveServicesCredentials
 
-def make_face_client(key):
+def make_face_client(endpoint, key):
   return FaceClient(endpoint, CognitiveServicesCredentials(key))
