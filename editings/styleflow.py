@@ -17,7 +17,7 @@ def edit_attribute(w_latents, attributes, lighting, session, model, w_avg, flow_
     z_latents = flow_w_to_z(flow_model, w_latents, attributes.ravel(), lighting)
     new_w_latents = w_latents
 
-    att_new = list(attributes.values())
+    att_new = list(attributes)
     attr_idx = -1
 
     for i, att in enumerate(attribute_names):  # Not the greatest code, but works!
