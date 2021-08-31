@@ -25,7 +25,7 @@ def predict_lighting(filepath, lighting_network):
     inputL = inputL[None,None,...]
     inputL = Variable(torch.from_numpy(inputL).cuda())
 
-    lightFolder = '../data/example_light/'
+    lightFolder = 'data/example_light/'
 
     sh = np.loadtxt(os.path.join(lightFolder, 'rotate_light_0.txt'))
     sh = sh[0:9]
