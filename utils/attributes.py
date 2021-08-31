@@ -26,7 +26,7 @@ from msrest.authentication import CognitiveServicesCredentials
 def get_face_attributes(filepath, face_client):
     face_attributes = ['age', 'gender', 'headPose', 'smile', 'hair', 'facialHair',  'glasses']
 
-    img = dlib.load_rgb_image(filepath)
+    face_fd = dlib.load_rgb_image(filepath)
     detected_faces = face_client.face.detect_with_stream(face_fd, return_face_attributes=face_attributes)
     if not detected_faces:
         return np.expand_dims(np.array([-1,  -1,  -1,  -1,  -1,  -1,  -1,  -1]),  axis = 1)
